@@ -13,9 +13,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Book_tickets',
+      theme: ThemeData(),
       home: Scaffold(
-        body: Container(
-          child: Text('Book tickets'),
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          title: Text('Flutter title'),
+          centerTitle: true,
+        ),
+        body: Center(
+          child: Text('Hello Flutter'),
         ),
       ),
     );
