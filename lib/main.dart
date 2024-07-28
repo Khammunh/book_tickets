@@ -1,3 +1,4 @@
+import 'package:book_tickets/base/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,17 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Book_tickets',
-      theme: ThemeData(),
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text('Flutter title'),
-          centerTitle: true,
-        ),
-        body: Center(
-          child: Text('Hello Flutter'),
-        ),
-      ),
+      home: BottomNavBar(),
     );
   }
 }
