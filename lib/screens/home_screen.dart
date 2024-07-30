@@ -11,9 +11,31 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(children: [
-        Container(child: ,)
-      ],),
+      body: ListView(
+        children: [
+          Column(
+            children: [
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      Text("text 1"),
+                      Text("text 2"),
+                    ],
+                  ),
+                  Container()
+                ],
+              ),
+              Row(
+                children: [
+                  Text("text 1"),
+                  Text("text 2"),
+                ],
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
