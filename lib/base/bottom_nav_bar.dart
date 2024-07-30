@@ -1,3 +1,4 @@
+import 'package:book_tickets/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -10,15 +11,16 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   final appScreen = [
-    Center(child: Text("Home")),
+    HomeScreen(),
     Center(child: Text("Search")),
     Center(child: Text("Tickets")),
     Center(child: Text("Profile")),
   ];
   int _selectedIndex = 0;
   void _onItemTapped(int index) {
-    _selectedIndex = index;
-    print("Tapped index is $_selectedIndex");
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 
   @override
@@ -30,6 +32,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       ),
       body: appScreen[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         selectedItemColor: Colors.blueGrey,
         unselectedItemColor: Color(0xFF526400),
