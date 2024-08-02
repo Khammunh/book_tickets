@@ -1,3 +1,4 @@
+import 'package:book_tickets/base/res/styles/app_style.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,19 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Text(
                           "Good morning",
-                          style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          style: AppStyles.headLineStyle3,
                         ),
                         SizedBox(height: 5),
-                        Text(
-                          "Book Tickets",
-                          style: TextStyle(
-                              fontSize: 26,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xFF3b3b3b)),
-                        ),
+                        Text("Book Tickets", style: AppStyles.headLineStyle1),
                       ],
                     ),
                     Container(
