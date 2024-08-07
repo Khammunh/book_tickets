@@ -1,3 +1,4 @@
+import 'package:book_tickets/base/res/media.dart';
 import 'package:book_tickets/base/res/styles/app_style.dart';
 import 'package:flutter/material.dart';
 
@@ -29,13 +30,21 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: AppStyles.headLineStyle3,
                         ),
                         SizedBox(height: 5),
-                        Text("Book Tickets", style: AppStyles.headLineStyle1),
+                        Text(
+                          "Book Tickets",
+                          style: AppStyles.headLineStyle1,
+                        ),
                       ],
                     ),
                     Container(
-                      color: Colors.red,
-                      width: 100,
-                      height: 70,
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: AssetImage(AppMedia.logo),
+                        ),
+                      ),
                     ),
                   ],
                 ),

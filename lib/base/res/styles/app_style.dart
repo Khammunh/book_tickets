@@ -12,7 +12,7 @@ class AppStyles {
   );
   static TextStyle headLineStyle3 = TextStyle(
     fontSize: 17,
-    //here i lean
+   
     fontWeight: FontWeight.w500,
   );
 }
