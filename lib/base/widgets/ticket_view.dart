@@ -1,4 +1,5 @@
 import 'package:book_tickets/base/res/styles/app_style.dart';
+import 'package:book_tickets/base/widgets/app_layoutbuilder_widget.dart';
 import 'package:book_tickets/base/widgets/big_dot.dart';
 import 'package:flutter/material.dart';
 
@@ -12,47 +13,99 @@ class TicketView extends StatelessWidget {
       width: size.width * 0.85,
       height: 179,
       child: Container(
-          margin: EdgeInsets.only(right: 16),
-          padding: EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: AppStyles.ticketBlue,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(21),
-              topRight: Radius.circular(21),
-            ),
+        margin: EdgeInsets.only(right: 16),
+        padding: EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: AppStyles.ticketBlue,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(21),
+            topRight: Radius.circular(21),
           ),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "NYC",
-                    style: AppStyles.headLineStyle3.copyWith(
-                      color: Colors.white,
-                    ),
+        ),
+        child: Column(
+          children: [
+            //show departure and destination with icons first line
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "NYC",
+                  style: AppStyles.headLineStyle3.copyWith(
+                    color: Colors.white,
                   ),
-                  Expanded(
-                    child: Container(),
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+                BigDot(),
+                Expanded(
+                  child: Stack(
+                    children: [
+                      SizedBox(
+                        height: 24,
+                        child: AppLayoutbuilderWidget(
+                          randomDivider: 6,
+                        ),
+                      ),
+                      Center(
+                        child: Transform.rotate(
+                          angle: 1.57, // right
+                          // angle: -1.5, left
+                          child: Icon(
+                            Icons.local_airport_rounded,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  BigDot(),
-                  Expanded(
-                    child: Container(),
+                ),
+                BigDot(),
+                Expanded(
+                  child: Container(),
+                ),
+                Text(
+                  "LDN",
+                  style: AppStyles.headLineStyle3.copyWith(
+                    color: Colors.white,
                   ),
-                  BigDot(),
-                  Expanded(
-                    child: Container(),
+                ),
+              ],
+            ),
+            //show departure and destination and with time
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "New - York",
+                  style: AppStyles.headLineStyle3.copyWith(
+                    color: Colors.white,
                   ),
-                  Text(
-                    "NYC",
-                    style: AppStyles.headLineStyle3.copyWith(
-                      color: Colors.white,
-                    ),
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+                Text(
+                  "8H 30H",
+                  style: AppStyles.headLineStyle3.copyWith(
+                    color: Colors.white,
                   ),
-                ],
-              )
-            ],
-          )),
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+                Text(
+                  "London",
+                  style: AppStyles.headLineStyle3.copyWith(
+                    color: Colors.white,
+                  ),
+                  //learn here.
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

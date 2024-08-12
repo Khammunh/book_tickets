@@ -12,6 +12,7 @@ class BigDot extends StatelessWidget {
         border: Border.all(
           width: 2.5,
           color: Colors.white,
+          
         ),
       ),
     );
