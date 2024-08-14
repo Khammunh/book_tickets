@@ -29,7 +29,7 @@ class AppLayoutbuilderWidget extends StatelessWidget {
             ),
           ),
         );
-      },
+      },                                               
     );
   }
 }

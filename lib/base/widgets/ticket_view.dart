@@ -1,5 +1,6 @@
 import 'package:book_tickets/base/res/styles/app_style.dart';
 import 'package:book_tickets/base/widgets/app_layoutbuilder_widget.dart';
+import 'package:book_tickets/base/widgets/big_circle.dart';
 import 'package:book_tickets/base/widgets/big_dot.dart';
 import 'package:flutter/material.dart';
 
@@ -114,15 +115,15 @@ class TicketView extends StatelessWidget {
               color: AppStyles.ticketOrange,
               child: Row(
                 children: [
-                  SizedBox(
-                    height: 20,
-                    width: 10,
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        color: Colors.white
-                      ),
-                    ),
-                  )
+                  BigCircle(
+                    isRight: false,
+                  ),
+                  Expanded(
+                    child: Container(),
+                  ),
+                  BigCircle(
+                    isRight: true,
+                  ),
                 ],
               ),
             ),
